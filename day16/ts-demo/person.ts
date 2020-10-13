@@ -27,4 +27,5 @@ export class Person{
         console.log(' not eligible')
         }
     }
+
 }
