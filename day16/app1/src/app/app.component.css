@@ -1,0 +1,19 @@
+.box{
+    width: 100px;
+    height: 100px;
+
+}
+
+.red-box{
+    background-color: red;
+}
+
+
+.blue-box{
+    background-color: blue;
+}
+
+
+.green-box{
+    background-color:green;
+}
