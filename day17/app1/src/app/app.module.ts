@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { MobileListComponent } from './mobile-list/mobile-list.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AccordionComponent } from './accordion/accordion.component';
     EmployeeListComponent,
     CarListComponent,
     MobileListComponent,
-    AccordionComponent
+    AccordionComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule

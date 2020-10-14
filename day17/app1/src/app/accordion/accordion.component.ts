@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
 
-  isVisible=true
+  isVisible=false
 
 
   constructor() { }

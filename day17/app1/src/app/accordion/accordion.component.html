@@ -1,18 +1,26 @@
-<h1>Accordian Demo</h1>
+
 
 <div class="card">
     <div class="card-header" style="cursor: pointer;" (click)="toggelVisibility()">
         <!-- <button  class="btn btn-warning float-right">toggel</button> -->
-        <img class="float-right" src="assets/down.png" alt="">
+        <!-- <img *ngIf="isVisible" class="float-right" src="assets/down.png" alt="">
+        <img *ngIf="!isVisible" class="float-right" src="assets/up.png" alt=""> -->
+        <img  class="float-right" src="assets/{{isVisible? 'down.png' : 'up.png'}}" alt="">
         
         <h2>Note 1</h2>
     </div>
     <div 
     *ngIf="isVisible"
     class="card-body">
-        <div class="note">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+        <div class="note">Lorem Ipsum is simply dummy text of the rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
     </div>
 </div>
+
+
+
+
+
+
 
 
 <!-- <div class="card">
