@@ -1,10 +1,25 @@
-<h2>Rating Component</h2>
+<h2>Smiley Face</h2>
 
-<img src="assets/star.png" *ngFor="let _ of ratings" alt="">
+<button style="margin-left: 10px;" (click)="face = 'disappointed'" class="btn btn-success">disappointed</button>
+<button style="margin-left: 10px;" (click)="face = 'happy'" class="btn btn-success">happy</button>
+<button style="margin-left: 10px;" (click)="face = 'neutral'" class="btn btn-success">neutral</button>
+<button style="margin-left: 10px;" (click)="face = 'puzzled'" class="btn btn-success">puzzled</button>
+<button style="margin-left: 10px;" (click)="face = 'sad'" class="btn btn-success">sad</button>
+<button style="margin-left: 10px;" (click)="face = 'surprised'" class="btn btn-success">surprised</button>
 
-<hr>
-<img src="assets/star.png" *ngIf="rating >= 1" alt="">
-<img src="assets/star.png" *ngIf="rating >= 2" alt="">
-<img src="assets/star.png" *ngIf="rating >= 3" alt="">
-<img src="assets/star.png" *ngIf="rating >= 4" alt="">
-<img src="assets/star.png" *ngIf="rating >= 5" alt="">
+<div [ngSwitch]="face">
+  <img *ngSwitchCase="'disappointed'" src="assets/disappointed.png" alt="">
+  <img *ngSwitchCase="'happy'" src="assets/happy.png" alt="">
+  <img *ngSwitchCase="'neutral'" src="assets/neutral.png" alt="">
+  <img *ngSwitchCase="'puzzled'" src="assets/puzzled.png" alt="">
+  <img *ngSwitchCase="'sad'" src="assets/sad.png" alt="">
+  <img *ngSwitchCase="'surprised'" src="assets/surprised.png" alt="">
+</div>
+
+
+<!-- <img *ngIf="face == 'disappointed'" src="assets/disappointed.png" alt="">
+<img *ngIf="face == 'happy'" src="assets/happy.png" alt="">
+<img *ngIf="face == 'neutral'" src="assets/neutral.png" alt="">
+<img *ngIf="face == 'puzzled'" src="assets/puzzled.png" alt="">
+<img *ngIf="face == 'sad'" src="assets/sad.png" alt="">
+<img *ngIf="face == 'surprised'" src="assets/surprised.png" alt=""> -->
