@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarComponent implements OnInit {
 
+  rating = 2
+  ratings = [0, 1, 2, 3, 4]
+
   constructor() { }
 
   ngOnInit(): void {
