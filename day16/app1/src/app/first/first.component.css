@@ -1,0 +1,18 @@
+.person1{
+
+    width: 200px;
+    border: solid 3px black;
+    padding: 10px;
+    margin: 10px;
+    background-color: bisque;
+}
+
+
+.person2{
+
+    width: 200px;
+    border: solid 3px black;
+    padding: 10px;
+    margin: 10px;
+    background-color: ghostwhite;
+}
