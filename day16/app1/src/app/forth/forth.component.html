@@ -3,3 +3,27 @@
 
 <button (click)="handle()">click here</button>
 
+
+<hr>
+
+
+<div [class.red-box]="boxType==1"
+[class.blue-box]="boxType==2"
+[class.green-box]="boxType==3"
+[class.yellow-box]="boxType==4"
+[class.brown-box]="boxType==5"
+
+ class="box"></div>
+
+<button (click)="changeColor(3)">green</button>
+<button (click)="changeColor(4)">yellow</button>
+
+<button (click)="changeColor(1)">red</button>
+
+<button (click)="changeColor(2)">blue</button>
+
+<button (click)="changeColor(5)">brown</button>
+
+
+
+

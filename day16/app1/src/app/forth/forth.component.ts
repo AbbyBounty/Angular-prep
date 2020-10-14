@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForthComponent implements OnInit {
 
+
+  boxType=1
+  color='green'
+
   constructor() { }
 
   ngOnInit(): void {
@@ -14,6 +18,10 @@ export class ForthComponent implements OnInit {
 
    handle(){
     alert('handle clicked')
+}
+
+changeColor(num:number){
+this.boxType=num
 }
 
 }
