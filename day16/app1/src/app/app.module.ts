@@ -17,6 +17,6 @@ import { ThirdComponent } from './third/third.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent,FirstComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

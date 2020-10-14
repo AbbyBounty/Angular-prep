@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThirdComponent implements OnInit {
 
-  boxType=1
+  boxType=3
 
+  buttonType=7
   constructor() { }
 
   ngOnInit(): void {
