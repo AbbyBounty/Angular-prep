@@ -13,10 +13,10 @@ cars=[
     id:1,model:'i20',company:'hyundai'
   },
   {
-    id:1,model:'nana',company:'tata'
+    id:2,model:'nana',company:'tata'
   },
   {
-    id:1,model:'A4',company:'Audi'
+    id:3,model:'A4',company:'Audi'
   }
 ]
 
