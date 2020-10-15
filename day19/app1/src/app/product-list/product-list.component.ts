@@ -1,3 +1,4 @@
+import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,19 +8,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  products=[
+  productService:ProductService
 
-    {
-      id:1,
-      titile:"dummy",
-      description:"dummy description",
-      "price":"100",
-      
-    }
+  products=[
+  //   {
+  //     "id": 1,
+  //     "title": "iphone updated",
+  //     "description": "this is apples",
+  //     "price": "12222",
+  //     "isActive": 0,
+  //     "brand": {
+  //         "id": 1,
+  //         "title": "apple"
+  //     },
+  //     "category": {
+  //         "id": 1,
+  //         "title": "electronics"
+  //     }
+  // }
   ]
-  constructor() { }
+  
+  constructor(productService:ProductService) { 
+    this.productService=productService
+  }
 
   ngOnInit(): void {
+  }
+
+
+  loadProducts(){
+    const req=this.productService.getProducts()
+      req.subscribe(res=>{
+        if(res['status']=='success')
+        {
+           this.products=res['data']
+           
+        }
+      })
+    
   }
 
 }

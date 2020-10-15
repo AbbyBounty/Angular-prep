@@ -47,4 +47,17 @@ router.get('/', (request, response) => {
   })
 })
 
+
+
+router.post('/create',(req,res)=>{
+  const {title,description,category,price,brand}=req.body
+  const statement=`insert into product (title, description, category, price, brand) values (
+      '${title}', '${description}', '${category}', '${price}', '${brand}'
+    )`
+ 
+  db.query(statement,(error,data)=>{
+      res.send(utils.createResult(error,data))
+  })
+})
+
 module.exports = router
