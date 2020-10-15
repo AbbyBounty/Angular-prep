@@ -13,9 +13,14 @@ app.use(bodyParser.json())
 
 const userRouter = require('./routes/user')
 const productRouter = require('./routes/product')
+const categoryRouter=require('./routes/category')
+const brandRouter=require('./routes/brand')
+
 
 app.use('/user', userRouter)
 app.use('/product', productRouter)
+app.use('/category', categoryRouter)
+app.use('/brand', brandRouter)
 
 app.listen(3000, '0.0.0.0', () => {
   console.log('server started on port 3000')

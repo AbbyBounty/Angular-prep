@@ -8,17 +8,38 @@ export class ProductService {
 
   httpClient:HttpClient
 
+  title:string
+  description:string
+  price:number
+  category:number
+  brand:number
+
+  url='http://localhost:3000/product'
+
   constructor(httpClient:HttpClient) { 
     this.httpClient=httpClient
   }
 
   getProducts(){
-    const url='http://localhost:3000/product'
-    return this.httpClient.get(url)
+    
+    return this.httpClient.get(this.url)
   }
 
-  createProducts()
+  createProducts( title:string,
+    description:string,
+    price:number,
+    category:number,
+    brand:number )
   {
+    const body={
+      title:title,
+    description:description,
+    price:price,
+    category:category,
+    brand:brand
+    }
+
+    return this.httpClient.post(this.url,body)
 
   }
 

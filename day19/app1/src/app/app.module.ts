@@ -1,3 +1,4 @@
+import { BrandService } from './brand.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http'
 import {FormsModule} from '@angular/forms'
 import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { CategoryService } from './category.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { ProductAddComponent } from './product-add/product-add.component';
     FormsModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    CategoryService,
+    BrandService
   ],
   bootstrap: [AppComponent]
 })
