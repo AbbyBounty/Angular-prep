@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductListComponent implements OnInit {
 
   productService:ProductService
+  router:Router
 
   products=[
   //   {
@@ -28,7 +30,7 @@ export class ProductListComponent implements OnInit {
   // }
   ]
   
-  constructor(productService:ProductService) { 
+  constructor(productService:ProductService,router:Router) { 
     this.productService=productService
   }
 
@@ -49,6 +51,23 @@ export class ProductListComponent implements OnInit {
         }
       })
     
+  }
+
+
+  onDelete(product){
+    this.productService.deleteProduct(product['id']).subscribe(res=>{
+      if(res['status']=='success'){
+        alert(`${product['title']} deleted successfully..`)
+        this.loadProducts()
+      }
+      else{
+        console.log(res['error'])
+      }
+    })
+  }
+
+  onEdit(product){
+    // this.router.navigate(['/product-add'], {queryParams: {id: product['id']}})
   }
 
 }

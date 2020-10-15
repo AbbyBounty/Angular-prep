@@ -44,7 +44,11 @@ export class ProductService {
   }
 
   editProducts(){
+    
+  }
 
+  deleteProduct(id:number){
+    return this.httpClient.delete(this.url+"/"+id)
   }
 
 }

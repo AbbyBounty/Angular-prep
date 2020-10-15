@@ -4,6 +4,11 @@ const utils = require('../utils')
 
 const router = express.Router()
 
+
+// --------------------GET-----------------------
+// --------------------GET-----------------------
+// --------------------GET-----------------------
+
 router.get('/', (request, response) => {
   const statement = `
       select p.id, p.title, p.description, 
@@ -48,8 +53,11 @@ router.get('/', (request, response) => {
 })
 
 
+// --------------------POST-----------------------
+// --------------------POST-----------------------
+// --------------------POST-----------------------
 
-router.post('/create',(req,res)=>{
+router.post('/',(req,res)=>{
   const {title,description,category,price,brand}=req.body
   const statement=`insert into product (title, description, category, price, brand) values (
       '${title}', '${description}', '${category}', '${price}', '${brand}'
@@ -57,6 +65,20 @@ router.post('/create',(req,res)=>{
  
   db.query(statement,(error,data)=>{
       res.send(utils.createResult(error,data))
+  })
+})
+
+
+
+
+// --------------------DELETE-----------------------
+// --------------------DELETE-----------------------
+// --------------------DELETE-----------------------
+router.delete('/:id', (request, response) => {
+  const {id} = request.params
+  const statement = `delete from product where id = ${id}`
+  db.query(statement, (error, data) => {
+    response.send(utils.createResult(error, data))
   })
 })
 

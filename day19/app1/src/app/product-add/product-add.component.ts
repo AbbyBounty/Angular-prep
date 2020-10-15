@@ -12,9 +12,9 @@ export class ProductAddComponent implements OnInit {
 
   title=``
   description=``
-  price=``
-  category=``
-  brand=``
+  price=0
+  category=1
+  brand=1
 
   categories=[]
   brands=[]
@@ -28,6 +28,7 @@ export class ProductAddComponent implements OnInit {
      }
 
   ngOnInit(): void {
+    this.loadData()
   }
 
   loadData(){
@@ -36,6 +37,7 @@ export class ProductAddComponent implements OnInit {
     .subscribe(res=>{
       if(res['status']=='success'){
         this.categories=res['data']
+        console.log(this.categories)
       }else{
         console.log(res['error'])
       }
@@ -55,8 +57,18 @@ export class ProductAddComponent implements OnInit {
 
 
   onSave(){
-    this.productService.getProducts().subscribe(res=>{
-
+    this.productService.createProducts(this.title,this.description,this.price,this.category,this.brand).subscribe(res=>{
+      if(res['status']=='success'){
+        alert(`${this.title} added successfully`)
+        console.log(this.title)
+        console.log(this.description)
+        console.log(this.price)
+        console.log(this.brand)
+        console.log(this.category)
+      }
+      else{
+        console.log(res['error'])
+      }
     })
   }
 

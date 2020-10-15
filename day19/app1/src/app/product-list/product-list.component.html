@@ -5,7 +5,10 @@
     <div class="card-header">
         <h4>Product list</h4>
     </div>
+<div class="container">
 
+  
+</div>
     <div class="card-body">
         <!-- <button (click)="loadProducts()" style="margin-bottom: 10px;" class="btn bt-sm btn-success">Load Products</button>
         <button style="margin-bottom: 10px;" class="btn bt-sm btn-success float-right">Add</button> -->
@@ -33,8 +36,10 @@
                 <td>{{product['category']['title']}}</td>
                 <td>{{product['brand']['title']}}</td>
                 <td>
+
+                  
                   <button (click)="onEdit(product)" class="btn btn-warning btn-sm">Edit</button>
-                  <button (click)="onDelete(product, index)" style="margin-left: 10px;" class="btn btn-danger btn-sm">Delete</button>
+                  <button (click)="onDelete(product)" style="margin-left: 10px;" class="btn btn-danger btn-sm">Delete</button>
                 </td>
               </tr>
             </tbody>

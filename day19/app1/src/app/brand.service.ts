@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BrandService {
- url='http://localhost:3000/product'
+ url='http://localhost:3000/brand'
 
  httpClient:HttpClient
 
@@ -14,6 +14,7 @@ export class BrandService {
    }
 
    getBrands(){
+     console.log('getbrands')
      return this.httpClient.get(this.url)
    }
   

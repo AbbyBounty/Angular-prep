@@ -1,45 +1,60 @@
 <div class="card">
-    <div class="card-header">
-        <h3>Add Prodcut</h3>
-    </div>
-    <div class="card-body">
-        <div class="form">
-            <div ([ngModel])="title" class="form-group">
-              <label for="">Title</label>
-              <!-- <input (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)" (change)="onTitleChange($event)" type="text" class="form-control"> -->
-              <input  type="text" class="form-control">
-            </div>
-            <div ([ngModel])="price" class="form-group">
-              <label for="">Price</label>
-              <input  type="number" class="form-control">
-            </div>
-            <div ([ngModel])="category" class="form-group">
-              <label for="">Category</label>
-              <select class="form-control">
-                <option value="1">Electronics</option>
-                <option value="2">Home Decore</option>
-                <option value="3">Computers</option>
-                <option value="4">Mobiles</option>
-              </select>
-            </div>
+  <div class="card-header">
+    <h3>Add Prodcut</h3>
+  </div>
+  <div class="card-body">
+    <div class="form">
 
-            <div ([ngModel])="brand" class="form-group">
-                <label for="">Brand</label>
-                <select class="form-control" ngFor="let brand for brands">
-                  <option value="1">{{brand}}</option>
-          
-                </select>
-            </div>
-            <div ([ngModel])="description" class="form-group">
-              <label for="">Description</label>
-              <textarea  class="form-control" rows="10"></textarea>
-            </div>
-          
+      <div class="row">
+        <div class="col-md-6">
+          <div  class="form-group">
+            <label for="">Title</label>
+            <!-- <input (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)" (change)="onTitleChange($event)" type="text" class="form-control"> -->
+            <input [(ngModel)]="title" type="text" class="form-control">
           </div>
+        </div>
+        <div class="col-md-6">
+          <div  class="form-group">
+            <label for="">Price</label>
+            <input [(ngModel)]="price" type="number" class="form-control">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div  class="form-group">
+            <label for="">Category</label>
+            <select [(ngModel)]="category" class="form-control">
+              <option [value]="category['id']" *ngFor="let category of categories">{{category['title']}}</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div  class="form-group">
+            <label for="">Brand</label>
+            <select [(ngModel)]="brand" class="form-control">
+              <option [value]="brand['id']" *ngFor="let brand of brands">{{brand['title']}}</option>
+
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div  class="form-group">
+        <label for="">Description</label>
+        <textarea [(ngModel)]="description" class="form-control" rows="10"></textarea>
+      </div>
+
     </div>
-    <div class="card-footer">
-        <button (click)="onSave()" class="btn btn-success">Save</button>
-        <button (click)="onCancle()"  style="margin:5px" class="btn btn-danger">Cancle</button>
-        
-    </div>
+  </div>
+  <div class="card-footer">
+
+
+    <button (click)="onSave()" class="btn btn-success">Save</button>
+    <button (click)="onCancle()" style="margin:5px" class="btn btn-danger">Cancle</button>
+
+  </div>
 </div>
