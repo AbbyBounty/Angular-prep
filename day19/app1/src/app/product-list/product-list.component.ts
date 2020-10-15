@@ -33,16 +33,19 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadProducts()
   }
 
 
   loadProducts(){
+
     const req=this.productService.getProducts()
       req.subscribe(res=>{
         if(res['status']=='success')
         {
            this.products=res['data']
-           
+           console.log(this.products)
+
         }
       })
     

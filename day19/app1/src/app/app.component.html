@@ -1,5 +1,14 @@
 <div class="container">
-  <!-- <app-product-list></app-product-list> -->
+  <!-- <app-product-list></app-product-list>
 
-  <app-product-add></app-product-add>
+  <app-product-add></app-product-add> -->
+<a class="btn btn-link" (click)="goToPage(1)" routerLink="/product-list">Product list</a>
+<a class="btn btn-link" (click)="goToPage(2)" routerLink="/product-add">Add Product</a>
+<a class="btn btn-link" (click)="goToPage(3)" routerLink="/brand-list">Brands</a>
+<a class="btn btn-link" (click)="goToPage(4)" routerLink="/category-list">Category</a>
+<a class="btn btn-link" (click)="goToPage(5)" routerLink="/about-us">About us</a>
+<a class="btn btn-link" (click)="goToPage(6)" routerLink="/my-order">My Orders</a>
+
+
+  <router-outlet></router-outlet>
 </div>

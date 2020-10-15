@@ -1,4 +1,4 @@
-<p>product-list works!</p>
+
 
 
 <div class="card">
@@ -7,10 +7,11 @@
     </div>
 
     <div class="card-body">
-        <button (click)="loadProducts()" style="margin-bottom: 10px;" class="btn bt-sm btn-success">Load Products</button>
-        <button style="margin-bottom: 10px;" class="btn bt-sm btn-success float-right">Add</button>
+        <!-- <button (click)="loadProducts()" style="margin-bottom: 10px;" class="btn bt-sm btn-success">Load Products</button>
+        <button style="margin-bottom: 10px;" class="btn bt-sm btn-success float-right">Add</button> -->
         <h4 *ngIf="products.length==0">There is no product</h4>
 
+        
         <table *ngIf="products.length > 0" class="table table-striped table-bordered">
             <thead>
               <tr>
@@ -38,5 +39,7 @@
               </tr>
             </tbody>
           </table>
+
+         
     </div>
 </div>
