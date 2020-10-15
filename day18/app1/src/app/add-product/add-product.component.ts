@@ -7,33 +7,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
+  title = ''
+  description = ''
+  price = ''
+  category = ''
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSave(event){
-
+  onKeyUpTitle(event) {
+    console.log('on key up')
+    // console.log(event)
+    this.title = event.target.value
   }
 
-  onTitleChange(event){
-
+  onKeyUpPrice(event) {
+    this.price = event.target.value
   }
 
-  onCancle(event){
-
+  onKeyUpDescription(event) {
+    this.description = event.target.value
   }
 
-  onKeyUp(event){
-    console.log(`onkeyup ${event}`)
+  onKeyDown(event) {
+    console.log('on key down')
+    console.log(event)
   }
 
-  onKeyDown(event){
-    console.log(`onkeydown ${event}`)
+  onTitleChange(event) {
+    console.log('inside onTitleChange()')
+    console.log(event)
   }
 
-  onKeyChange(event){
-    console.log(`onkeychange ${event}`)
+  onSave(event) {
+    console.log(`title = ${this.title}`)
+    console.log(`description = ${this.description}`)
+    console.log(`price = ${this.price}`)
+    // console.log(event)
+  }
+
+  onCancel(event) {
+    // console.log(event)
   }
 
 }
