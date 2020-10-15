@@ -12,4 +12,28 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSave(event){
+
+  }
+
+  onTitleChange(event){
+
+  }
+
+  onCancle(event){
+
+  }
+
+  onKeyUp(event){
+    console.log(`onkeyup ${event}`)
+  }
+
+  onKeyDown(event){
+    console.log(`onkeydown ${event}`)
+  }
+
+  onKeyChange(event){
+    console.log(`onkeychange ${event}`)
+  }
+
 }
