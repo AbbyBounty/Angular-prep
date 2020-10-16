@@ -67,7 +67,7 @@ export class ProductListComponent implements OnInit {
   }
 
   onEdit(product){
-    // this.router.navigate(['/product-add'], {queryParams: {id: product['id']}})
+    // thkis.router.navigate(['/product-add'], {queryParams: {id: product['id']}})
   }
 
 }
