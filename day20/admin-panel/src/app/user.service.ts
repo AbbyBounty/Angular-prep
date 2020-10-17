@@ -16,7 +16,9 @@ export class UserService {
       headers: new HttpHeaders({
         token: sessionStorage['token']
       })
+     
     };
+
     
     return this.httpClient.get(this.url, httpOptions)
   }

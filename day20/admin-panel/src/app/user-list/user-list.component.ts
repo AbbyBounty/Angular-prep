@@ -22,11 +22,16 @@ export class UserListComponent implements OnInit {
       .getUsers()
       .subscribe(response => {
         if (response['status'] == 'success') {
+          console.log(response['status'])
           this.users = response['data']
+          
         } else {
           console.log(response['error'])
+
         }
       })
+
+
   }
 
   toggleActive(user) {
