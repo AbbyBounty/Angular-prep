@@ -25,6 +25,7 @@ export class ProductListComponent implements OnInit {
       .subscribe(response => {
         if (response['status'] == 'success') {
           this.products = response['data']
+          console.log(this.products)
         } else {
           console.log(response['error'])
         }
@@ -47,10 +48,11 @@ export class ProductListComponent implements OnInit {
     this.router.navigate(['/product-add'], {queryParams: {id: product['id']}})
   }
 
+  uploadImage(product) {
+    this.router.navigate(['/product-upload-image'], {queryParams: {id: product['id']}})
+  }
 
-
-  addProduct(){
+  addProduct() {
     this.router.navigate(['/product-add'])
-
   }
 }

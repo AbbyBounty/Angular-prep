@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { UploadImageComponent } from './upload-image/upload-image.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
     LoginComponent,
     SignupComponent,
     ProductAddComponent,
+    UploadImageComponent,
    
   ],
   imports: [
