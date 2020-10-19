@@ -17,6 +17,7 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductService } from './product.service';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ProductService } from './product.service';
     OrderListComponent,
     LoginComponent,
     SignupComponent,
+    ProductAddComponent,
    
   ],
   imports: [

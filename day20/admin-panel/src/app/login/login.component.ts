@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AdminService } from './../admin.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   password = ''
 
   constructor(
-    private adminService: AdminService) {
+    private adminService: AdminService,private router:Router) {
     }
 
   ngOnInit(): void {
@@ -30,6 +31,8 @@ export class LoginComponent implements OnInit {
           sessionStorage['token'] = data['token']
           sessionStorage['firstName'] = data['firstName']
           sessionStorage['lastName'] = data['lastName']
+
+          this.router.navigate(['/dashboard'])
         } else {
           alert('invalid email or password')
         }

@@ -46,4 +46,11 @@ export class ProductListComponent implements OnInit {
   onEdit(product) {
     this.router.navigate(['/product-add'], {queryParams: {id: product['id']}})
   }
+
+
+
+  addProduct(){
+    this.router.navigate(['/product-add'])
+
+  }
 }
